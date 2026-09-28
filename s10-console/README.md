@@ -4,6 +4,9 @@ A local, USB-first desktop console for **your previously authorized Galaxy S10
 SM-G973F**. Manages official scrcpy in a separate native window on Linux/Wayland.
 No companion APK, per-session MediaProjection dialog, recording, account, or cloud.
 
+**Publication scope:** this is the reviewed original console baseline, not the
+latest final-verification branch. Later unconfirmed work and results are omitted.
+
 **Prepare before losing the display.** Without USB debugging and this PC's prior
 authorization, the app cannot approve the phone's RSA prompt invisibly. ADB access
 does not guarantee access before first unlock, to protected content, or after key

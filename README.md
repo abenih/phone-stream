@@ -5,6 +5,11 @@ USB-first Linux desktop manager for official scrcpy. It targets an explicitly
 enrolled Samsung Galaxy S10 SM-G973F / Android 12 and uses a separate native
 viewer. It does not require a companion APK or a cloud service.
 
+This first publication is the **reviewed original S10 Console baseline
+snapshot**, selected from its owner's stable source and verified offline. It is
+not the latest complete final-verification branch: all later, unconfirmed
+final-verifier changes and results are omitted.
+
 The older bidirectional PhoneStream experiment, unfinished repairs, hotspot
 gateway/provider integrations, and live-device test harnesses are not part of
 this source snapshot. Runtime device identities, credentials, media, local

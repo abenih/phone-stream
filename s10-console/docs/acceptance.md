@@ -49,8 +49,9 @@ private receipts, live harnesses and local device state are not committed here.
 
 ## Historical hardware observations and limits
 
-The following summarizes development handoffs, not a current device inspection
-or fresh acceptance run for this publication. No serials, endpoints, clipboard
+The following summarizes the original baseline owner's development evidence,
+not later final-verifier results, a current device inspection, or a fresh
+acceptance run for this publication. No serials, endpoints, clipboard
 contents, screenshots, recordings, credentials or private result files are
 included. Owner-confirmed behavior, technical telemetry and controlled fixtures
 provide different strengths of evidence.
