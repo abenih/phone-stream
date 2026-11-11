@@ -15,6 +15,17 @@ gateway/provider integrations, and live-device test harnesses are not part of
 this source snapshot. Runtime device identities, credentials, media, local
 configuration, and generated distributions are intentionally excluded.
 
+## Branches
+
+- **`main`** — the phone-stream root plus the reviewed S10 Console baseline
+  snapshot described above, under [`s10-console/`](s10-console/).
+- **`agents/android-game-controls-tool-development`** — **S10 Game Controls**,
+  the Android companion built on this setup: a Kotlin link app
+  (`dev.gamecontrols.link`) and protocol library for streaming the phone's
+  screen to a viewer on the same LAN and sending touch input back, with TLS
+  pairing, its own test suite, and `docs/validation.md`. It branches from
+  this repo's root commit; check out that branch to browse it.
+
 ## Install and use
 
 Prerequisites: Linux, Python 3.12-3.14, [uv](https://docs.astral.sh/uv/), official
