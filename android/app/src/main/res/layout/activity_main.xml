@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/heading" android:textAppearance="?attr/textAppearanceHeadline5" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="@string/scope" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="@string/warning" android:textStyle="bold" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton android:id="@+id/hostRole"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:minHeight="48dp" android:text="@string/host_role" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/clientRole"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginStart="8dp" android:minHeight="48dp" android:text="@string/client_role" />
+        </LinearLayout>
+        <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginVertical="12dp" android:accessibilityLiveRegion="polite"
+            android:text="@string/invite_empty" android:textStyle="bold" />
+        <LinearLayout android:id="@+id/hostSection" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/host_steps" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/openInvitation"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="48dp" android:text="@string/invite_open" />
+            <TextView android:id="@+id/invitation" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:saveEnabled="false" android:importantForAutofill="noExcludeDescendants"
+                android:text="@string/invite_empty" android:textIsSelectable="true" android:textSize="12sp" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/copyInvitation"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="48dp" android:enabled="false" android:text="@string/invite_copy" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/startCapture"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="48dp" android:enabled="false" android:text="@string/start_capture" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:text="@string/accessibility_note" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/accessibilitySettings"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="48dp" android:text="@string/accessibility_settings" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:labelFor="@id/target" android:text="@string/target_label" />
+            <Spinner android:id="@+id/target" android:layout_width="match_parent" android:layout_height="48dp"
+                android:contentDescription="@string/target_label" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/allowControl"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="48dp" android:enabled="false" android:text="@string/allow_control" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/revokeControl"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="48dp" android:enabled="false" android:text="@string/revoke_control" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/stopAll"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="48dp" android:text="@string/stop_all" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/clientSection" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="@string/client_steps" />
+            <EditText android:id="@+id/clientInvitation" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:minHeight="96dp" android:gravity="top"
+                android:hint="@string/invite_hint" android:inputType="textMultiLine|textNoSuggestions|textVisiblePassword"
+                android:importantForAutofill="noExcludeDescendants" android:saveEnabled="false"
+                android:imeOptions="flagNoPersonalizedLearning" android:maxLength="1024" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/connect"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:minHeight="48dp" android:text="@string/connect" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

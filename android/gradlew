@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+APP_HOME=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+: "${JAVA_HOME:?Set JAVA_HOME to an existing JDK 17 installation}"
+case "$("$JAVA_HOME/bin/java" -version 2>&1 | head -n 1)" in
+    *\"17.*) ;;
+    *) echo "Game Controls Link requires JDK 17." >&2; exit 1 ;;
+esac
+if [ ! -x "$JAVA_HOME/bin/javac" ]; then
+    echo "JAVA_HOME must contain the JDK compiler." >&2
+    exit 1
+fi
+export GRADLE_USER_HOME="$APP_HOME/.gradle-user-home"
+export ANDROID_USER_HOME="$APP_HOME/.local/.android"
+DISTRIBUTION="$GRADLE_USER_HOME/wrapper/dists/gradle-8.13-bin/5xuhj0ry160q40clulazy9h7d/gradle-8.13"
+if [ ! -x "$DISTRIBUTION/bin/gradle" ]; then
+    echo "Offline Gradle 8.13 is missing from this workspace. Import the approved cache first." >&2
+    exit 1
+fi
+mkdir -p "$APP_HOME/.build-work" "$ANDROID_USER_HOME"
+export JAVA_TOOL_OPTIONS="${JAVA_TOOL_OPTIONS:-} -Djava.io.tmpdir=$APP_HOME/.build-work -Duser.home=$APP_HOME/.local"
+exec "$JAVA_HOME/bin/java" -classpath "$APP_HOME/gradle/wrapper/gradle-wrapper.jar" \
+    org.gradle.wrapper.GradleWrapperMain -p "$APP_HOME" --offline --no-daemon --max-workers=2 "$@"

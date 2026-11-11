@@ -1,0 +1,14 @@
+android/.gradle/
+android/.gradle-user-home/
+android/.build-work/
+android/.local/
+android/.kotlin/
+android/**/build/
+android/local.properties
+dist/
+*.hprof
+*.keystore
+*.jks
+*.p12
+.idea/
+*.iml

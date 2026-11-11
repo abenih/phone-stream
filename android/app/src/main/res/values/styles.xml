@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.GameLink" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#176859</item>
+        <item name="colorPrimaryVariant">#104D42</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+</resources>
